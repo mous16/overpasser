@@ -1,10 +1,10 @@
 apply plugin: 'com.android.library'
 
 // gradle.properties holds credentials and is not checked in
-def gradleProperties = new File('gradle.properties')
-if (gradleProperties.exists()) {
-    apply from: 'maven-push.gradle'
-}
+//def gradleProperties = new File('gradle.properties')
+//if (gradleProperties.exists()) {
+//    apply from: 'maven-push.gradle'
+//}
 
 
 android {

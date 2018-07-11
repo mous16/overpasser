@@ -11,9 +11,9 @@ abstract class AbstractOverpassQuery {
         this.builder = builder;
     }
 
-    public void onSubQueryResult(AbstractOverpassSubQuery subQuery) {
-        builder.append(subQuery.build());
+    public void onSubQueryResult(AbstractOverpassSubQuery subQuery, boolean recursive) {
+        builder.append(subQuery.build(recursive));
     }
 
-    protected abstract String build();
+    protected abstract String build(boolean recursive);
 }

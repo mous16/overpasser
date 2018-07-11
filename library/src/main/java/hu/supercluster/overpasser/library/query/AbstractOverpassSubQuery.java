@@ -13,8 +13,8 @@ abstract class AbstractOverpassSubQuery extends AbstractOverpassQuery {
         this.parent = parent;
     }
 
-    public final OverpassQuery end() {
-        parent.onSubQueryResult(this);
+    public final OverpassQuery end(boolean recursive) {
+        parent.onSubQueryResult(this, recursive);
 
         return parent;
     }

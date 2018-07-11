@@ -29,7 +29,7 @@ public class OverpassQueryTest {
 
     @Test
     public void testBuild() throws Exception {
-        query.build();
+        query.build(false);
 
         verify(builder).append(";");
     }

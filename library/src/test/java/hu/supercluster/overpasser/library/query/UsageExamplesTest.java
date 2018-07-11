@@ -38,9 +38,9 @@ public class UsageExamplesTest {
                             47.48047027491862, 19.039797484874725,
                             47.51331674014172, 19.07404761761427
                     )
-                .end()
+                .end(true)
                 .output(OutputVerbosity.BODY, OutputModificator.CENTER, OutputOrder.QT, 100)
-                .build()
+                .build(false)
         ;
 
         String expected = "[out:\"json\"][timeout:\"30\"]; (node[\"amenity\"=\"parking\"][\"access\"!=\"private\"](47.48047027491862,19.039797484874725,47.51331674014172,19.07404761761427);<;); out body center qt 100;";
@@ -77,9 +77,9 @@ public class UsageExamplesTest {
                                 47.48047027491862, 19.039797484874725,
                                 47.51331674014172, 19.07404761761427
                         )
-                .end()
+                .end(true)
                 .output(OutputVerbosity.BODY, OutputModificator.CENTER, OutputOrder.QT, 100)
-                .build()
+                .build(false)
         ;
 
         String expected = "[out:\"json\"][timeout:\"30\"]; ("
@@ -108,10 +108,10 @@ public class UsageExamplesTest {
                     .way()
                         .amenity("parking")
                         .tagNot("access", "private")
-                .end()
+                .end(true)
 
                 .output(OutputVerbosity.BODY, OutputModificator.CENTER, OutputOrder.QT, 100)
-                .build()
+                .build(false)
                 ;
 
         String expected = "[out:\"json\"][timeout:\"30\"]"
@@ -149,9 +149,9 @@ public class UsageExamplesTest {
                                 47.48047027491862, 19.039797484874725,
                                 47.51331674014172, 19.07404761761427
                         )
-                .end()
+                .end(true)
                 .output(OutputVerbosity.BODY, OutputModificator.CENTER, OutputOrder.QT, 100)
-                .build()
+                .build(false)
         ;
 
         String expected = "[out:\"json\"][timeout:\"30\"]; ("

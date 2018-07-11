@@ -33,7 +33,7 @@ public class OverpassFilterQueryTest {
 
     @Test
     public void testBuild() throws Exception {
-        filterQuery.build();
+        filterQuery.build(true);
 
         verify(builder).append(END_TOKEN);
         verify(builder).build();

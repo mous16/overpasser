@@ -254,10 +254,14 @@ public class OverpassFilterQuery extends AbstractOverpassSubQuery {
      * Closes the current query with the characters <i>;&lt;;)</i> and returns the output as a string.
      *
      * @return the query as string
+     * @param recursive
      */
     @Override
-    public String build() {
-        builder.append(";<;)");
+    public String build(boolean recursive) {
+        builder.append(";");
+        if (recursive)
+            builder.append("<;");
+        builder.append(")");
 
         return builder.build();
     }

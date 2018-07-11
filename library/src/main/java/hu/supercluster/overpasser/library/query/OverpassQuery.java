@@ -133,9 +133,10 @@ public class OverpassQuery extends AbstractOverpassQuery {
      * Closes the current query with the character <i>;</i> and returns the output as a string.
      *
      * @return the query as string
+     * @param recursive
      */
     @Override
-    public String build() {
+    public String build(boolean recursive) {
         builder.append(";");
 
         return builder.build();
